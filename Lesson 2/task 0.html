@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Homework</title>
+</head>
+<body>
+    <h1>Задача 0</h1>
+    <p>
+        Обчислити значення виразів:
+        <br> S1 = a + 12 + b
+        <br> S2 = √((a + b) / (2a))
+        <br> S3 = ³√((a + b) * c)
+        <br> S4 = sin(a - b)
+    </p>
+
+    <script>
+        // Отримуємо необхідні значення
+        let a = parseInt(prompt('Введіть a', '0'));
+        let b = parseInt(prompt('Введіть b', '0'));
+        let c = parseInt(prompt('Введіть c', '0')); 
+
+        // Обчислюємо результати
+        let s1 = a + 12 + b;
+        let s2 = Math.sqrt((a + b) / (2 * a)); 
+        let s3 = Math.cbrt((a + b) * c); 
+        let s4 = Math.sin(a - b); 
+
+        // Виводимо результат
+        document.write(`
+            <div class="page__answer">
+                <div class="page__text">Для даних a=${a}, b=${b}, c=${c}, результат:</div>
+                <ul>
+                    <li>S1 = ${s1}</li>
+                    <li>S2 = ${s2}</li>
+                    <li>S3 = ${s3}</li>
+                    <li>S4 = ${s4}</li>
+                </ul>
+            </div>
+        `);
+    </script>
+</body>
+</html>

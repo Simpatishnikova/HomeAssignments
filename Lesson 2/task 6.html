@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Homework</title>
+</head>
+<body>
+    <h1>Задача 6</h1>
+    <p>
+      З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. 
+      Обчислити вартість кожного товару окремо та загальну вартість. 
+      Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+    </p>
+
+    <script>
+        // Отримуємо необхідні значення
+        //  Ціни
+        const goodOnePrice = parseInt(prompt('Введіть вартість першого товару, грн', '0'));
+        const goodTwoPrice = parseInt(prompt('Введіть вартість другого товару, грн', '0'));
+        const goodThreePrice = parseInt(prompt('Введіть вартість третього товару, грн', '0'));
+        
+        // Кількість
+        const goodOneNum = parseInt(prompt('Введіть кількість першого товару , штук', '0'));
+        const goodTwoNum = parseInt(prompt('Введіть кількість другого товару, штук', '0'));
+        const goodThreeNum = parseInt(prompt('Введіть кількість третього товару, штук', '0'));
+
+        // Обчислюємо результати
+        const goodOneSum = goodOnePrice * goodOneNum
+        const goodTwoSum = goodTwoPrice * goodTwoNum
+        const goodThreeSum = goodThreePrice * goodThreeNum
+        const total = goodOneSum + goodTwoSum + goodThreeSum
+        // Виводимо результат
+        
+        
+      document.write(`<div class="center"><strong>Магазин "Товари"</strong><br> Київ, вул. Січових стрільців 1<br>Чек №12345</div>`);
+      document.write(`<div class="line"></div>`);
+      document.write(`<div class="item"><span>Товар 1 </span><span> ------ ${goodOneSum} грн</span></divclass=><br>`);
+      document.write(`<divclass="item"><span>Товар 2 </span><span> ------ ${goodTwoSum} грн</span></divclass=><br>`);
+      document.write(`<div class="item"><span>Товар 3 </span><span> ------ ${goodThreeSum} грн</span></div><br>`);
+      document.write(`<div class="line"></div><br>`);
+      document.write(`<div class="item"><strong>Разом</strong><strong> ${total}</strong></div><br>`);
+      document.write(`<div class="center">Дякуємо за покупку!</div><br>`);
+    </script>
+</body>
+</html>
