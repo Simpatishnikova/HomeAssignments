@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Homework</title>
+</head>
+<body>
+    <h1>Задача 7</h1>
+    <p>
+      З клавіатури вводиться номер місяця. 
+      Вивести до якої пори він відноситься
+    </p>
+
+    <script>
+      
+         // Отримуємо необхідні значення
+         const month = prompt(`Введіть місяць`);
+        let result
+
+        // Виводимо результат
+        switch (month.toLowerCase()) {
+         case "січень": 
+         case "лютий": 
+         case "грудень": 
+         result = "Зима";
+         break;
+         case "березень": 
+         case "квітень": 
+         case "травень": 
+         result = "Весна";
+         break;
+         case "червень": 
+         case "липень": 
+         case "серпень": 
+         result = "Літо";
+         break;
+         case "вересень": 
+         case "жовтень": 
+         case "листопад": 
+         result = "Осінь";
+         break;
+         default: result = "Невідома категорія"
+        }
+        document.write(`${result}`);
+    </script>
+</body>
+</html>
